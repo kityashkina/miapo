@@ -29,15 +29,15 @@
 		private void InitializeComponent()
 		{
 			this.label1 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -50,16 +50,6 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "ГИБДД";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = global::ГИБДД.Properties.Resources.image_1;
-			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(270, 222);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 1;
-			this.pictureBox1.TabStop = false;
 			// 
 			// label2
 			// 
@@ -76,7 +66,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Rubik One", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label3.Location = new System.Drawing.Point(535, 385);
+			this.label3.Location = new System.Drawing.Point(535, 404);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(171, 45);
 			this.label3.TabIndex = 3;
@@ -95,7 +85,7 @@
 			// textBox2
 			// 
 			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBox2.Location = new System.Drawing.Point(493, 449);
+			this.textBox2.Location = new System.Drawing.Point(493, 468);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(254, 31);
 			this.textBox2.TabIndex = 5;
@@ -105,10 +95,10 @@
 			// 
 			this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
 			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.Font = new System.Drawing.Font("Rubik One", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(450, 533);
+			this.button1.Font = new System.Drawing.Font("Rubik One", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button1.Location = new System.Drawing.Point(452, 568);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(325, 69);
+			this.button1.Size = new System.Drawing.Size(314, 61);
 			this.button1.TabIndex = 6;
 			this.button1.Text = "Войти";
 			this.button1.UseVisualStyleBackColor = false;
@@ -123,6 +113,16 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(596, 228);
 			this.panel1.TabIndex = 7;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::ГИБДД.Properties.Resources.image_1;
+			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(270, 222);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 1;
+			this.pictureBox1.TabStop = false;
 			// 
 			// Form1
 			// 
@@ -140,9 +140,9 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

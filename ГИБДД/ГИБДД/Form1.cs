@@ -41,7 +41,8 @@ namespace ГИБДД
 		}
 		private void button1_Click(object sender, EventArgs e)
 		{
-
+			mainMenu mainForm = new mainMenu();
+			mainForm.Show();
 		}
 
 		private void label1_Click(object sender, EventArgs e)
