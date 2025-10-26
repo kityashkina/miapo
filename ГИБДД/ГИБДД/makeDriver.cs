@@ -19,6 +19,30 @@ namespace ГИБДД
 
 		private void makeDriver_Load(object sender, EventArgs e)
 		{
+			locationButtons();
+		}
+
+		private void locationButtons()
+		{
+			int buttonWidth = 314;
+			int buttonHeight = 61;
+			int margin = 265;
+
+			button2.Location = new Point(margin, 668);
+			button3.Location = new Point(this.ClientSize.Width - margin - buttonWidth, 668);
+		}
+		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
 
 		}
 	}
