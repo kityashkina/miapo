@@ -21,18 +21,32 @@ namespace ГИБДД
         {
 
         }
-        private void locationButtons()
-        {
-            int buttonWidth = 314;
-            int buttonHeight = 61;
-            int margin = 265;
+		private void locationButtons()
+		{
+			int buttonWidth = 272;
+			int buttonHeight = 52;
+			int margin = 150;
 
-            button2.Location = new Point(margin, 668);
-            button3.Location = new Point(this.ClientSize.Width - margin - buttonWidth, 668);
-        }
+			button1.Location = new Point(margin, 450);
+			button2.Location = new Point(this.ClientSize.Width - margin - buttonWidth, 450);
+		}
         private void workwFines_Load(object sender, EventArgs e)
         {
-            locationButtons();
+          locationButtons();
         }
-    }
+
+
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			mainMenu mainMenu = new mainMenu();
+			mainMenu.Show();
+		}
+	}
 }

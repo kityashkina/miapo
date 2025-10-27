@@ -35,12 +35,14 @@ namespace ГИБДД
             this.Close();
             workwFines workwFines = new workwFines();
             workwFines.Show();
-        }
+			this.Close();
+		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
 			makeDriver makeDr = new makeDriver();
 			makeDr.Show();
+			this.Close();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -53,7 +55,8 @@ namespace ГИБДД
             this.Close();
             export export = new export();
             export.Show();
-        }
+			this.Close();
+		}
 
         private void button5_Click(object sender, EventArgs e)
         {

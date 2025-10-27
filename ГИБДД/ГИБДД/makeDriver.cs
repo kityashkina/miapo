@@ -20,16 +20,51 @@ namespace ГИБДД
 		private void makeDriver_Load(object sender, EventArgs e)
 		{
 			locationButtons();
+			SetupTextBoxPlaceholders();
 		}
 
 		private void locationButtons()
 		{
-			int buttonWidth = 314;
-			int buttonHeight = 61;
-			int margin = 265;
+			int buttonWidth = 272;
+			int buttonHeight = 52;
+			int margin = 150;
 
-			button2.Location = new Point(margin, 668);
-			button3.Location = new Point(this.ClientSize.Width - margin - buttonWidth, 668);
+			button2.Location = new Point(margin, 450);
+			button3.Location = new Point(this.ClientSize.Width - margin - buttonWidth, 450);
+		}
+		private void SetupTextBoxPlaceholders()
+		{
+			foreach (Control control in tableLayoutPanel1.Controls)
+			{
+				if (control is TextBox textBox)
+				{
+					SetupSingleTextBox(textBox);
+				}
+			}
+		}
+
+		private void SetupSingleTextBox(TextBox textBox)
+		{
+			textBox.Text = "Введите данные";
+			textBox.ForeColor = Color.Gray;
+
+			textBox.Enter += (s, e) =>
+			{
+				if (textBox.Text == "Введите данные")
+				{
+					textBox.Text = "";
+					textBox.ForeColor = Color.Black;
+				}
+			};
+
+			textBox.Leave += (s, e) =>
+			{
+				if (string.IsNullOrWhiteSpace(textBox.Text))
+				{
+					textBox.Text = "Введите данные";
+					textBox.ForeColor = Color.Gray;
+				}
+			};
 		}
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
 		{
@@ -46,10 +81,6 @@ namespace ГИБДД
 
 		}
 
-        private void makeDriver_Load_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {

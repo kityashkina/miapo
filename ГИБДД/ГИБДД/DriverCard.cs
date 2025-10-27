@@ -89,5 +89,12 @@ namespace ГИБДД
         {
 
         }
-    }
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			mainMenu mainMenu = new mainMenu();
+			mainMenu.Show();
+		}
+	}
 }
