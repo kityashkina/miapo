@@ -69,5 +69,25 @@ namespace ГИБДД
 		{
 
 		}
-	}
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DriverCard_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

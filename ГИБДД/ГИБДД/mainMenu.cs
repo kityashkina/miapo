@@ -32,8 +32,10 @@ namespace ГИБДД
 		}
 		private void button3_Click(object sender, EventArgs e)
 		{
-
-		}
+            this.Close();
+            workwFines workwFines = new workwFines();
+            workwFines.Show();
+        }
 
 		private void button1_Click(object sender, EventArgs e)
 		{
@@ -48,7 +50,16 @@ namespace ГИБДД
 
 		private void button4_Click(object sender, EventArgs e)
 		{
+            this.Close();
+            export export = new export();
+            export.Show();
+        }
 
-		}
-	}
+        private void button5_Click(object sender, EventArgs e)
+        {
+			this.Close();
+			Form1 Form1 = new Form1();
+            Form1.Show();
+        }
+    }
 }

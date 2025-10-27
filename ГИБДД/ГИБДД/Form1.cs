@@ -43,7 +43,7 @@ namespace ГИБДД
 		{
 			mainMenu mainForm = new mainMenu();
 			mainForm.Show();
-		}
+        }
 
 		private void label1_Click(object sender, EventArgs e)
 		{

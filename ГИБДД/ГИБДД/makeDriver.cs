@@ -45,5 +45,17 @@ namespace ГИБДД
 		{
 
 		}
-	}
+
+        private void makeDriver_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mainMenu mainMenu = new mainMenu();
+            mainMenu.Show();
+        }
+    }
 }
