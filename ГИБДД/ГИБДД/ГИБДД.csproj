@@ -79,9 +79,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RButtons.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="workwFines.cs">
       <SubType>Form</SubType>
     </Compile>
