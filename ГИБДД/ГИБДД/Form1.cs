@@ -84,14 +84,36 @@ namespace ГИБДД
 			CenterPanelWithOffset();
 			SetupTextBoxPlaceholders();
 		}
-		private void button1_Click(object sender, EventArgs e)
-		{
-			mainMenu menu = new mainMenu();
-			menu.Show();
-			this.Hide();
-		}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string login = textBox1.Text.Trim();
+            string password = textBox2.Text.Trim();
 
-		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+            // Проверяем, не placeholder ли это
+            if (login == "Введите логин" || password == "Введите пароль")
+            {
+                MessageBox.Show("Пожалуйста, введите логин и пароль");
+                return;
+            }
+
+            DatabaseHelper db = new DatabaseHelper();
+            string query = $"SELECT * FROM Users WHERE Login = N'{login}' AND Password = N'{password}'";
+
+            DataTable result = db.ExecuteQuery(query);
+
+            if (result.Rows.Count > 0)
+            {
+                mainMenu menu = new mainMenu();
+                menu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль");
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}
