@@ -19,7 +19,6 @@ namespace ГИБДД
         {
             string databasePath = Path.Combine(Application.StartupPath, "GIBDD_DB.mdf");
 
-            // Если базы нет - создаем
             if (!File.Exists(databasePath))
             {
                 CreateDatabase();
@@ -30,7 +29,6 @@ namespace ГИБДД
         {
             try
             {
-                // Создаем базу данных
                 string createDbQuery = @"
                     CREATE DATABASE [GIBDD_DB] ON PRIMARY 
                     (NAME = GIBDD_DB, FILENAME = '" + Path.Combine(Application.StartupPath, "GIBDD_DB.mdf") + @"')";
@@ -44,7 +42,6 @@ namespace ГИБДД
                     }
                 }
 
-                // Создаем таблицы
                 CreateTables();
             }
             catch (Exception ex)
