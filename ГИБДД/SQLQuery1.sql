@@ -1,35 +1,29 @@
-﻿CREATE TABLE Users (
-    Id int IDENTITY(1,1) PRIMARY KEY,
-    Login nvarchar(50),
-    Password nvarchar(50)
-);
+﻿INSERT INTO Users (Login, Password) VALUES 
+(N'ИванЗоло', N'12345');
 
-INSERT INTO Users (Login, Password) VALUES (N'ИванЗоло', N'12345');
+INSERT INTO Drivers (LastName, FirstName, MiddleName, Passport, Phone, Email, City, Address) VALUES 
+(N'Иванов', N'Иван', N'Иванович', N'4510123456', N'89991234567', N'ivanov@mail.ru', N'Москва', N'ул. Ленина, д. 10'),
+(N'Петров', N'Петр', N'Петрович', N'4510987654', N'89997654321', N'petrov@gmail.com', N'Санкт-Петербург', N'пр. Победы, д. 25'),
+(N'Сидорова', N'Мария', N'Сергеевна', N'4520112233', N'89995556677', N'sidorova@yandex.ru', N'Казань', N'ул. Баумана, д. 5'),
+(N'Козлов', N'Алексей', N'Владимирович', N'4520445566', N'89998887766', N'kozlov@mail.ru', N'Новосибирск', N'пл. Ленина, д. 1'),
+(N'Новиков', N'Дмитрий', N'Олегович', N'4530778899', N'89993332211', N'novikov@gmail.com', N'Екатеринбург', N'ул. Мира, д. 15'),
+(N'Федоров', N'Сергей', N'Анатольевич', N'4530123987', N'89994445566', N'fedorov@yandex.ru', N'Краснодар', N'ул. Красная, д. 100'),
+(N'Морозова', N'Ольга', N'Игоревна', N'4540567890', N'89991112233', N'morozova@mail.ru', N'Ростов-на-Дону', N'пр. Стачки, д. 50'),
+(N'Волков', N'Андрей', N'Дмитриевич', N'4540876543', N'89996667788', N'volkov@gmail.com', N'Воронеж', N'ул. Плехановская, д. 30'),
+(N'Лебедева', N'Екатерина', N'Александровна', N'4550192837', N'89997778899', N'lebedeva@yandex.ru', N'Самара', N'ул. Куйбышева, д. 40'),
+(N'Соколов', N'Михаил', N'Викторович', N'4550465738', N'89990001122', N'sokolov@mail.ru', N'Уфа', N'ул. Ленина, д. 70');
 
-CREATE TABLE Drivers (
-    Id int IDENTITY(1,1) PRIMARY KEY,
-    LastName nvarchar(100),
-    FirstName nvarchar(100),
-    MiddleName nvarchar(100),
-    Passport nvarchar(50),
-    Phone nvarchar(20),
-    Email nvarchar(100),
-    City nvarchar(100),
-    Address nvarchar(200)
-);
+INSERT INTO Fines (DriverId, FineDate, FineType, FineAmount, FineStatus) VALUES 
+(1, '2024-01-15', N'Превышение скорости', 500.00, N'Не оплачен'),
+(1, '2024-02-20', N'Парковка в неположенном месте', 1500.00, N'Оплачен'),
+(2, '2024-01-10', N'Проезд на красный свет', 1000.00, N'Не оплачен'),
+(3, '2024-03-05', N'Отсутствие ремня безопасности', 500.00, N'Оплачен'),
+(3, '2024-03-15', N'Превышение скорости', 500.00, N'Не оплачен'),
+(4, '2024-02-28', N'Не пропустил пешехода', 1500.00, N'Оплачен'),
+(5, '2024-01-20', N'Парковка на газоне', 2000.00, N'Не оплачен'),
+(6, '2024-03-10', N'Превышение скорости', 500.00, N'Оплачен'),
+(7, '2024-02-14', N'Тонировка стекол', 3000.00, N'Не оплачен'),
+(8, '2024-01-30', N'Проезд на красный свет', 1000.00, N'Оплачен'),
+(9, '2024-03-01', N'Отсутствие ОСАГО', 800.00, N'Не оплачен'),
+(10, '2024-02-05', N'Превышение скорости', 500.00, N'Оплачен');
 
-CREATE TABLE Fines (
-    Id int IDENTITY(1,1) PRIMARY KEY,
-    DriverId int FOREIGN KEY REFERENCES Drivers(Id),
-    FineDate date,
-    FineType nvarchar(100),
-    FineAmount decimal(10,2),
-    FineStatus nvarchar(50)
-);
-
-CREATE TABLE Exports (
-    Id int IDENTITY(1,1) PRIMARY KEY,
-    DriverId int FOREIGN KEY REFERENCES Drivers(Id),
-    ExportDate date,
-    ExportStatus nvarchar(50)
-);

@@ -234,7 +234,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGray;
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(192, 474);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -247,7 +247,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
+            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(612, 474);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -260,7 +260,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.LightGray;
+            this.button4.BackColor = System.Drawing.Color.LightCoral;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(400, 566);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -292,6 +292,7 @@
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(236, 217);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);

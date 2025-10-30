@@ -171,7 +171,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(187, 517);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -184,7 +184,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
+            this.button2.BackColor = System.Drawing.Color.LightCoral;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(624, 517);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
@@ -238,7 +238,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(473, 479);
+            this.label7.Location = new System.Drawing.Point(702, 388);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 20);

@@ -204,16 +204,10 @@ namespace ГИБДД
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (CurrentDriver.Id > 0)
-            {
-                export exportForm = new export();
-                exportForm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Сначала выберите водителя");
-            }
+            this.Close();
+            mainMenu mainMenu = new mainMenu();
+            mainMenu.Show();
+
         }
 
         // Остальные пустые методы

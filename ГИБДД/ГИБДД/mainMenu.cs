@@ -21,9 +21,9 @@ namespace ГИБДД
             int leftMargin = 158;
             int rightMargin = ClientSize.Width - 772;
 
-            button2.Location = new Point(ClientSize.Width - button2.Width - leftMargin, button2.Location.Y);
-            button4.Location = new Point(ClientSize.Width - button4.Width - leftMargin, button4.Location.Y);
+            button2.Location = new Point((this.ClientSize.Width - button2.Width) / 2, button2.Location.Y);
             button5.Location = new Point((this.ClientSize.Width - button5.Width) / 2, button5.Location.Y);
+            button1.Location = new Point((this.ClientSize.Width - button1.Width) / 2, button1.Location.Y);
         }
         private void mainMenu_Load(object sender, EventArgs e)
         {
@@ -176,8 +176,8 @@ private void button3_Click(object sender, EventArgs e)
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-            export export = new export();
-            export.Show();
+            mainMenu mainMenu = new mainMenu();
+            mainMenu.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

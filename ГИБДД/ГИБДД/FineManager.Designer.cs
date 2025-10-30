@@ -61,7 +61,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.LightGray;
+            this.btnAdd.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAdd.Location = new System.Drawing.Point(194, 473);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
@@ -73,7 +73,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.LightGray;
+            this.btnDelete.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDelete.Location = new System.Drawing.Point(194, 598);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
@@ -85,7 +85,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.LightGray;
+            this.btnSave.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSave.Location = new System.Drawing.Point(617, 473);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
@@ -97,7 +97,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.LightGray;
+            this.btnClose.BackColor = System.Drawing.Color.LightCoral;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnClose.Location = new System.Drawing.Point(617, 598);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);

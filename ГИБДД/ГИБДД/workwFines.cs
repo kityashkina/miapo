@@ -69,12 +69,53 @@ namespace ГИБДД
 			button2.Location = new Point(this.ClientSize.Width - margin - buttonWidth, 450);
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (driverData != null)
+            {
+                try
+                {
+                    DatabaseHelper db = new DatabaseHelper();
 
-		}
+                    // Получаем ID водителя
+                    int driverId = Convert.ToInt32(driverData["Id"]);
 
-		private void button2_Click(object sender, EventArgs e)
+                    // Обновляем статус всех штрафов водителя на "Оплачен"
+                    string updateQuery = $@"
+                UPDATE Fines 
+                SET FineStatus = N'Оплачен' 
+                WHERE DriverId = {driverId} AND FineStatus != N'Оплачен'";
+
+                    int rowsAffected = db.ExecuteNonQuery(updateQuery);
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show($"Успешно погашено штрафов: {rowsAffected}", "Информация",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Обновляем отображение штрафов
+                        LoadDriverFines(driverData);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Нет неоплаченных штрафов для погашения", "Информация",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при погашении штрафов: {ex.Message}", "Ошибка",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Данные водителя не загружены", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
 		{
 			this.Close();
 			mainMenu mainMenu = new mainMenu();
